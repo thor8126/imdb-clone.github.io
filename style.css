@@ -1,3 +1,40 @@
+@media only screen and (max-width: 768px) {
+    .search-container input {
+    width: 100%;
+    max-width: 400px;
+    }
+    .search-container button {
+    width: 100%;
+    max-width: 400px;
+    }
+    .col-4 img {
+    height: 300px;
+    }
+    }
+    
+    @media only screen and (max-width: 480px) {
+    .search-container input {
+    width: 100%;
+    max-width: 300px;
+    }
+    .search-container button {
+    width: 100%;
+    max-width: 300px;
+    }
+    .col-4 img {
+    height: 200px;
+    }
+    .search-container h1 {
+    font-size: 2rem;
+    }
+    .search-container h3 {
+    font-size: 1rem;
+    }
+    }
+
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -144,95 +181,137 @@ input:focus{
 }
 
 
-#moviepage{
+#moviepage {
     padding: 10px;
     height: 84vh;
-}
-
-#moviepage .header{
+  }
+  
+  #moviepage .header {
     display: flex;
-    justify-content:  space-between;
+    justify-content: space-between;
     align-items: center;
-}
-
-#moviepage .header .left h3{
+  }
+  
+  #moviepage .header .left h3 {
     color: white;
-}
-
-#moviepage .left{
+  }
+  
+  #moviepage .left {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 0px;
-}
-
-#moviepage .right{
+  }
+  
+  #moviepage .right {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.right .genre,.rating{
+    flex-wrap: wrap; /* add this to wrap the elements in smaller screens */
+  }
+  
+  .right .genre,
+  .rating {
     border: none;
     color: #fff;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-
-.rating,.genre{
+    margin-right: 10px; /* add this to add spacing between the elements */
+    margin-bottom: 10px; /* add this to add vertical spacing between the elements */
+  }
+  
+  .rating,
+  .genre {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;    
-}
-
-.left h3,span{
+    flex-direction: column;
+  }
+  
+  .left h3,
+  span {
     color: #fff;
     margin-bottom: 0;
-}
-
-.col-4 img{
+  }
+  
+  .col-4 img {
     width: 100%;
-    height: 460px;
+    height: auto; /* change this to auto to maintain aspect ratio */
     object-fit: cover;
-}
-
-.plot p,.plot h4{
+  }
+  
+  .plot p,
+  .plot h4 {
     color: #fff;
-}
-
-.plot p {
+  }
+  
+  .plot p {
     font-size: 1rem;
-}
-
-#moviepage .header .left{
+  }
+  
+  #moviepage .header .left {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 0px;
-}
+  }
+  
+ 
+
+  
+
+  @media (max-width: 768px) {
+    #moviepage .right {
+      flex-direction: column; /* stack the elements vertically */
+    }
+  
+    .right .genre,
+    .rating {
+      margin-right: 0; /* remove right margin */
+      margin-bottom: 5px; /* reduce bottom margin */
+    }
+  
+    .col-4 img {
+      height: 300px; /* reduce image height */
+    }
+  }
+  
 
 
-
-.presentation{
+  .presentation ul li{
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.presentation ul{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    list-style: none;
+.presentation ul li .icon{
+    width: 70px;
+    height: 30px;
 }
 
-.presentation ul li{
-    gap: 10px;
+.presentation ul li p{
+    flex: 1;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .presentation ul li{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .presentation ul li .icon{
+        width: auto;
+        height: auto;
+    }
+
+    .presentation ul li p{
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }

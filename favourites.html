@@ -39,7 +39,7 @@
     <br>
     <br>
     <br>
-    <div class="container" style="display: flex; gap: 30px;">
+    <div class="container" style="display: flex; gap: 30px; flex-wrap: wrap; align-items: center; justify-content: center;">
       
     </div>
 
@@ -47,15 +47,6 @@
 
 <script>
   
-  // enable horizontal scrolling thrugh mouse wheel on the container
-  $(document).ready(function() {
-    $(".container").on("wheel", function(e) {
-      e.preventDefault();
-      var delta = e.originalEvent.deltaX;
-      this.scrollLeft += delta;
-    });
-  });
-
 </script>
 
 </body>

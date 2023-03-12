@@ -263,21 +263,7 @@ input:focus{
 
   
 
-  @media (max-width: 768px) {
-    #moviepage .right {
-      flex-direction: column; /* stack the elements vertically */
-    }
-  
-    .right .genre,
-    .rating {
-      margin-right: 0; /* remove right margin */
-      margin-bottom: 5px; /* reduce bottom margin */
-    }
-  
-    .col-4 img {
-      height: 300px; /* reduce image height */
-    }
-  }
+
   
 
 
@@ -299,19 +285,49 @@ input:focus{
     margin-left: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .presentation ul li{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .presentation ul li .icon{
-        width: auto;
-        height: auto;
-    }
-
-    .presentation ul li p{
-        margin-left: 0;
-        margin-top: 10px;
-    }
+ul{
+  margin:0;
+  padding:0;
 }
+
+
+@media screen and (max-width: 768px) {
+    .custom-box{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }  
+    .right{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap!important;
+      flex-direction: row;
+    }
+    .col img{
+      width: 100%!important;
+      height: 300px!important;
+    }
+    .col-8{
+      width: 100%!important;
+      min-height: 100vh;
+    }
+
+    .col-4{
+      width: 100%!important;
+    }
+    .footer{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: -10px;
+    }
+    ul{
+      margin:0;
+      padding:0;
+    }
+  }

@@ -38,5 +38,6 @@ $(document).ready(function () {
     $(".body .presentation ul li:nth-child(3) span:nth-child(2)").text(data.Actors);
     $(".body .presentation ul li:nth-child(4) span:nth-child(2)").text(data.Awards);
     $(".body .presentation ul li:nth-child(5) span:nth-child(2)").text(data.BoxOffice);
-
+    $(".body .presentation ul li:nth-child(6) span:nth-child(2)").text(data.Runtime);
+    $(".body .presentation ul li:nth-child(7) span:nth-child(2)").text(data.Language);
   });
